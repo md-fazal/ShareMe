@@ -11,12 +11,12 @@ const Login = () => {
 	const navigate = useNavigate();
 
 	const responseGoogle = (response) => {
+		response.googleId = response.sub;
 		localStorage.setItem("user", JSON.stringify(response));
 		console.log(response);
 
-		const { name, sub, picture } = response;
+		const { name, googleId, picture } = response;
 		const imageUrl = picture;
-		const googleId = sub; //use sub as an alternative to unique googleId
 		console.log(name, googleId, imageUrl);
 
 		const doc = {

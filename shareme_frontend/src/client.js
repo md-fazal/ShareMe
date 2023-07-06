@@ -7,6 +7,7 @@ export const client = createClient({
     apiVersion: '2021-11-16',
     useCdn: true,
     token: process.env.REACT_APP_SANITY_TOKEN,
+    perspective: 'published'
 
 });
 
